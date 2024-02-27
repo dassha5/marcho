@@ -3,17 +3,17 @@ a, body {
   font-weight: 500;
 }
 
-.footer-top__title, .menu__list-link, .top-slider__link, .footer-top__form-btn {
+.categories__link, .info__item-title, .footer-top__title, .menu__list-link, .video-fashion__link, .top-slider__link, .footer-top__form-btn {
   font-family: "Quicksand-Regular", sans-serif;
   font-weight: 400;
 }
 
-.top-slider__title, .menu__list-link--active, .menu__list-link:hover {
+.top-slider__title, .menu__list-link--active, .menu__list-link:hover, .title {
   font-family: "Quicksand-Bold", sans-serif;
   font-weight: 700;
 }
 
-.top-slider__link, .footer-top__form-btn {
+.video-fashion__link, .top-slider__link, .footer-top__form-btn {
   padding: 12px 26px;
   text-transform: uppercase;
   color: #fff;
@@ -218,6 +218,21 @@ a {
   color: #8d8d8d;
 }
 
+.title {
+  text-align: center;
+  font-size: 48px;
+  line-height: 65px;
+  color: #29282d;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.text {
+  text-align: center;
+  max-width: 570px;
+  margin: 0 auto 55px;
+}
+
 .header {
   padding: 40px 0;
 }
@@ -367,11 +382,12 @@ footer {
 }
 
 .top-slider {
-  background-image: url("../images/photo/photo-slider.png");
+  background-image: url("../app/images/shape.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: top right;
   background-color: #f6f6f6;
-  padding: 65px 0 45px;
+  padding: 65px 0 0;
 }
 .top-slider__content {
   padding-left: -50px;
@@ -394,4 +410,120 @@ footer {
 }
 .top-slider__link {
   padding: 14px 36px;
+}
+
+.categories-info {
+  padding: 120px 0;
+  background-image: url("../images/Geometric shape.png");
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 110px;
+}
+.info__item {
+  padding: 60px 30px;
+  width: 370px;
+  box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+}
+.info__item-title {
+  margin: 35px 0 10px;
+  color: #29282d;
+  font-size: 22px;
+}
+
+.categories__items {
+  display: grid;
+  min-height: 635px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+.categories__item {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding-top: 35px;
+  padding-left: 40px;
+}
+.categories__item:nth-child(1) {
+  grid-row: span 2;
+}
+.categories__item:nth-child(1) .categories__item-subtitle,
+.categories__item:nth-child(1) .categories__link:hover {
+  color: #9459e8;
+}
+.categories__item:nth-child(2) {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 0;
+}
+.categories__item:nth-child(2) .categories__item-subtitle,
+.categories__item:nth-child(2) .categories__link:hover {
+  color: #fe3e57;
+}
+.categories__item:nth-child(3) .categories__item-subtitle,
+.categories__item:nth-child(3) .categories__link:hover {
+  color: #fee082;
+}
+.categories__item:nth-child(4) .categories__item-subtitle,
+.categories__item:nth-child(4) .categories__link:hover {
+  color: #34c3ff;
+}
+.categories__item-subtitle {
+  margin-bottom: 5px;
+}
+.categories__item-title {
+  font-size: 22px;
+  color: #29282d;
+  margin-bottom: 16px;
+}
+.categories__link {
+  text-transform: uppercase;
+  color: #29282d;
+  transition: all 0.3s;
+}
+
+.video-fashion {
+  background-color: rgb(246, 246, 246);
+  background-image: url(/app/images/Pattern.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 125px 0;
+}
+.video-fashion__inner {
+  display: flex;
+}
+.video-fashion__popup {
+  margin-right: 65px;
+  max-width: 530px;
+  width: 100%;
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.video-fashion__content {
+  max-width: 570px;
+}
+.video-fashion__subtitle {
+  padding-top: 75px;
+  font-size: 22px;
+  color: #fe3e57;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.video-fashion__title {
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+.video-fashion__text {
+  margin-bottom: 55px;
 }/*# sourceMappingURL=style.css.map */
