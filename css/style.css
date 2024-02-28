@@ -3,7 +3,7 @@ a, body {
   font-weight: 500;
 }
 
-.product-item__price, .categories__link, .info__item-title, .footer-top__title, .menu__list-link, .product-item--sale .product-item__img-box::before, .video-fashion__link, .top-slider__link, .footer-top__form-btn {
+.blog__item-title, .product-item__price, .categories__link, .info__item-title, .footer-top__title, .menu__list-link, .product-item--sale .product-item__img-box::before, .video-fashion__link, .top-slider__link, .footer-top__form-btn {
   font-family: "Quicksand-Regular", sans-serif;
   font-weight: 400;
 }
@@ -665,6 +665,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  box-shadow: 0px 10px 40px 0px rgba(187, 187, 187, 0.3);
 }
 .promo__clock-item span {
   font-size: 48px;
@@ -688,4 +689,71 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.blog {
+  padding: 50px 0 160px;
+  background-image: url(../app/images/blog-bg.png);
+  background-repeat: no-repeat;
+}
+.blog__items {
+  display: flex;
+  justify-content: space-between;
+}
+.blog__item {
+  max-width: 370px;
+  border: 1px solid #ececec;
+  padding-bottom: 30px;
+}
+.blog__item:hover {
+  box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+  border: none;
+}
+.blog__item:hover .blog__item-link {
+  color: #fe3e57;
+}
+.blog__item:hover .blog__item-link::after {
+  fill: #34c3ff;
+}
+.blog__item-imglink {
+  margin-bottom: 30px;
+  display: block;
+}
+.blog__item-imglink img {
+  height: 280px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.blog__item-box {
+  padding: 30px 40px;
+}
+.blog__item-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.blog__item-autor, .blog__item-data {
+  padding-left: 30px;
+  position: relative;
+}
+.blog__item-autor::before, .blog__item-data::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 4px;
+}
+.blog__item-autor {
+  background-image: url(/app/images/Shape\ 15.jpg);
+  background-repeat: no-repeat;
+}
+.blog__item-data {
+  background-image: url(/app/images/Shape\ 16.jpg);
+  background-repeat: no-repeat;
+}
+.blog__item-title {
+  color: #29282d;
+  font-size: 22px;
+  margin-bottom: 20px;
 }/*# sourceMappingURL=style.css.map */
