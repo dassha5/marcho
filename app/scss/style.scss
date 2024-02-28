@@ -153,6 +153,17 @@ footer{
         vertical-align: middle;
     }
 }
+.top{
+    &__container{
+        max-width: 1700px;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        padding: 120px 0 130px;
+        text-align: center;
+    }
+}
 .top-slider{ 
     background-image: url('../app/images/shape.png');
     background-repeat: no-repeat;
@@ -269,11 +280,11 @@ footer{
 }
 .video-fashion{
     background-color: rgb(246, 246, 246);
-   background-image: url(/app/images/Pattern.png);
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: center;
-   padding: 125px 0;
+    background-image: url(../../app/images/fashion.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 125px 0;
    &__inner{
     display: flex;
    }
@@ -494,9 +505,6 @@ footer{
             border: none;
             .blog__item-link{
                 color: $accent-color;
-                &::after{
-                    fill: #34c3ff;
-                }
             }
         }
     }
@@ -542,6 +550,55 @@ footer{
         @extend %roboto-400;
         font-size:22px;
         margin-bottom: 20px; 
+    }
+}
+.modal{
+    padding-top: 100px;
+    max-width: 570px;
+    margin: 0 auto 115px;
+    &__links{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    &__link{
+        color: #909090;
+        font-size: 22px;
+        @extend %roboto-400;
+        text-transform: uppercase;
+        margin: 0 30px;
+    }
+    &__link--active{
+        color: $accent-color;
+    }
+    &__label{
+        margin-bottom: 30px;
+        display: block;
+    }
+    &__input{
+        display: block;
+        width: 100%;
+        border: none;
+        background-color: $bg;
+        margin-top: 4px;
+        height: 60px;
+        padding: 0 15px;
+    }
+    &__btn{
+        background-color: $title;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 16px;
+        @extend %roboto-400;
+        padding: 14px 0;
+        border: none;
+        display: block;
+        width: 100%;
+        cursor: pointer;
+    }
+    &__error{
+        color: $accent-color;
+        margin-top: 12px;
+        display: inline-block;
     }
 }
 
