@@ -1,24 +1,65 @@
 $(function () {
-    $(".star").rateYo({
-        rating: 4,
-        starWidth: "17px",
-        normalFill: "#ccccce",
-        ratedFill: "#ffc35b",
-        readOnly: true
-    });
-    function getTimeRemaining(endtime) {
-        const total = Date.parse(endtime) - Date.parse(new Date());
-        const seconds = Math.floor((total / 1000) % 60);
-        const minutes = Math.floor((total / 1000 / 60) % 60);
-        const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-        const days = Math.floor(total / (1000 * 60 * 60 * 24));
-        return {
-            total,
-            days,
-            hours,
-            minutes,
-            seconds
-        };
+  $('.product-tabs__top-item').on('click', function (e) {
+    e.preventDefault();
+    $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
+    $(this).addClass('product-tabs__top-item--active');
+
+    $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+    $($(this).attr('href')).addClass('product-tabs__content-item--active');
+  });
+
+
+
+  $('.product-slide__thumb').slick({
+    asNavFor: '.product-slide__big',
+    focusOnSelect: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false
+  });
+  $('.product-slide__big').slick({
+    asNavFor: '.product-slide__thumb',
+    draggable: false,
+    arrows: false,
+    fade: true
+  });
+
+
+
+  $('.shop-content__filter-btn').on('click', function () {
+    $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
+    $(this).addClass('shop-content__filter-btn--active');
+  });
+  
+  $('.button-list').on('click', function () {
+    $('.product-item').addClass('product-item--list');
+  });
+  $('.button-grid').on('click', function () {
+    $('.product-item').removeClass('product-item--list');
+  });
+
+  $(".star").rateYo({
+    rating: 5,
+    starWidth: "17px",
+    normalFill: "#ccccce",
+    ratedFill: "#ffc35b",
+    readOnly: true
+  });
+
+  function getTimeRemaining(endtime) {
+    const total = Date.parse(endtime) - Date.parse(new Date());
+    const seconds = Math.floor((total / 1000) % 60);
+    const minutes = Math.floor((total / 1000 / 60) % 60);
+    const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+    const days = Math.floor(total / (1000 * 60 * 60 * 24));
+    return {
+      total,
+      days,
+      hours,
+      minutes,
+      seconds
+    };
 }
 
 function initializeClock(id, endtime) {
