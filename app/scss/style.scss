@@ -1396,4 +1396,120 @@ footer{
         }
     }
 }
+.blog-one{
+    &__text{
+        border: 1px solid #ececec;
+        border-top: none;
+        padding: 30px;
+        margin-top: -1px;
+        h4 {
+                color: $title;
+                font-size: 22px;
+                @extend %roboto-700;
+                margin: 25px 0;
+            }
+        
+            p {
+                margin: 25px 0;
+            }
+        
+            blockquote {
+                background-color: $bg;
+                border-left: 3px solid $accent-color;
+                color: $title;
+                @extend %roboto-400;
+                margin: 25px 0;
+                font-size: 22px;
+                padding: 35px;
+            }
+        
+    }
+    &__left-img {
+        float: left;
+        margin-right: 30px;
+    }
+    &__info{
+        display: flex;
+        margin-bottom: 25px;
+    }
+    &__info-link{
+        margin-right: 30px;
+        padding-left: 28px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            background-image: url(../app/images/calendar.svg);
+            width: 16px;
+            height: 16px;
+            top: 0;
+        }
+    }
+    &__info-link--comment::before{
+        background-image: url(../app/images/comments.svg);
+    }
+    &__info-link--author::before{
+        background-image: url(../app/images/user-blog.svg)
+    }
+    &__form-title{
+        text-transform: uppercase;
+        margin: 35px 0 25px;
+        color: $title;
+        font-size: 24px;
+        @extend %roboto-700;
+    }
+    .comments-form{
+        border-bottom:none; 
+    }
+    &__box{
+        margin: 25px 0 35px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__tags,
+    &__share{
+        span{
+            text-transform: uppercase;
+            color: $title;
+        }
+    }
+    &__share{
+        a{
+            margin-right: 12px;
+            vertical-align: middle;
+            &:hover{
+                path{
+                    fill: $accent-color;
+                }
+            }
+            path{
+                fill: #727272;
+            }
+        }
+    }
+    &__autor{
+        border-bottom: 1px solid #ececec;
+        display: flex;
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+    }
+    &__autor-img{
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        margin-right: 30px;
+    }
+    &__autor-name{
+        margin-bottom: 24px;
+        font-size: 22px;
+    }
+}
+.comments-title{
+    margin-bottom: 25px;
+    color: $title;
+    text-transform: uppercase;
+    font-size: 24px;
+    @extend %roboto-400;
+}
 @import 'media';
